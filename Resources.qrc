@@ -6,6 +6,7 @@
         <file>qml/Login.qml</file>
         <file>qml/MessagePalette.qml</file>
         <file>qml/PaletteMsg.qml</file>
+        <file>qml/Bargraph.qml</file>
         <file>images/inorbiter.png</file>
     </qresource>
 </RCC>

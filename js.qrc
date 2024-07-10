@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+<!--        <qresource prefix="components">-->
+                <file>components/home.qml</file>
+<!--        </qresource>-->
+<!--        <qresource prefix="js">-->
+                <file>js/generals.js</file>
+<!--        </qresource>-->
+    </qresource>
+
+</RCC>

@@ -2,3 +2,4 @@
 .qtc_clangd
 .qmake.stash
 cmake_build
+build

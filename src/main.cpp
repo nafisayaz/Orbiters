@@ -1,11 +1,15 @@
+
+#include <iostream>
+
 #include <QGuiApplication>
+#include <QCoreApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlComponent>
 #include <QDebug>
 #include <QQuickView>
 #include <QQmlContext>
 
-#include <app/qmlengine.h>
+#include "app/qmlengine.h"
 //#include <appmanager.h>
 
 
@@ -21,7 +25,21 @@ int main(int argc, char *argv[])
         QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
     }
+
+#ifdef Q_OS_LINUX
+  std::cout << "Linux version";
+#elif defined(Q_OS_CYGWIN)
+  std::cout << "Cygwin version";
+#else
+    #error "We don't support that version yet..."
+    return 0;
+#endif
+
+
     QGuiApplication app(argc, argv);
+    // QCoreApplication app(argc, argv);
+    QCoreApplication::setApplicationName("Orbiters-In");
+    QCoreApplication::setOrganizationName("Nheuristics");
 
     QMLEngine engine(&app);
     engine.load("qrc:/qml/main.qml");

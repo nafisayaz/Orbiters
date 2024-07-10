@@ -4,7 +4,7 @@
 #include <QQmlEngine>
 #include <QQmlContext>
 
-#include <app/appmanager.h>
+#include "appmanager.h"
 
 class QMLEngine
 {

@@ -11,7 +11,7 @@ Window {
     width: 480
     height: 840
     visible: true
-    title: qsTr("Orbiters-In")
+    // title: qsTr("Orbiters-In")
 
     property string secondaryColor: "#ef7d00"
 
@@ -23,9 +23,12 @@ Window {
     property string oldOriginalColor : "#21447"
 
     Index{
-
     }
 
+
+    // Bargraph{
+
+    // }
 
 
 

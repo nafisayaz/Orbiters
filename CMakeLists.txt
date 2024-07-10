@@ -24,11 +24,12 @@ project(
 find_package(Git REQUIRED)
 find_package(Qt6 6.2  REQUIRED COMPONENTS Quick Core Gui )
 find_package(Threads REQUIRED)
-qt_add_executable(Orbiters-In qml.qrc
-    main.cpp
-    ${PROJECT_ROOT}/app/appmanager.cpp
-    ${PROJECT_ROOT}/app/datentime.cpp
-    ${PROJECT_ROOT}/app/qmlengine.cpp
+qt_add_executable(Orbiters-In Resources.qrc
+    ${PROJECT_ROOT}/src/main.cpp
+    ${PROJECT_ROOT}/src/app/appmanager.cpp
+    ${PROJECT_ROOT}/src/app/qmlengine.cpp
+    ${PROJECT_ROOT}/src/app/loader.cpp
+    ${PROJECT_ROOT}/src/utility/datentime.cpp
 
 )
 
@@ -36,7 +37,7 @@ qt_add_qml_module(Orbiters-In
     URI Orbiters
     VERSION 1.0
     RESOURCES
-        qml.qrc
+        Resources.qrc
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

@@ -19,7 +19,7 @@ Item {
         border.color: blueColor
         border.width: 1
         radius: 0
-        gradient: Gradient {
+        gradient: Gradient { 
             GradientStop { position: 0.2; color: primaryColor}
         }
 

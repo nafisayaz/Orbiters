@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 13.0.2, 2024-07-10T10:50:12. -->
+<!-- Written by QtCreator 13.0.2, 2024-07-10T17:02:09. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -8,7 +8,7 @@
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
-  <value type="qlonglong">0</value>
+  <value type="qlonglong">2</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.EditorSettings</variable>
@@ -84,7 +84,7 @@
     <value type="bool" key="ClangTools.UseGlobalSettings">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ClangdSettings">
-    <value type="bool" key="blockIndexing">true</value>
+    <value type="bool" key="blockIndexing">false</value>
     <value type="bool" key="useGlobalSettings">true</value>
    </valuemap>
   </valuemap>
@@ -396,9 +396,9 @@
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
     <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph dwarf,4096 -F 250</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">OrbitersExecutable</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.OrbitersExecutable</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">OrbitersExecutable</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Orbiters-In</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.Orbiters-In</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">Orbiters-In</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
@@ -1216,7 +1216,7 @@
     <valuelist type="QVariantList" key="AndroidDeviceAbis">
      <value type="QString">x86_64</value>
     </valuelist>
-    <value type="QString" key="AndroidDeviceSerialNumber">emulator-5554</value>
+    <value type="QString" key="AndroidDeviceSerialNumber"></value>
     <value type="int" key="AndroidVersion.ApiLevel">34</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.0">
@@ -1235,9 +1235,9 @@
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
     <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph dwarf,4096 -F 250</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">OrbitersExecutable</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:OrbitersExecutable</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">OrbitersExecutable</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Orbiters-In</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:Orbiters-In</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">Orbiters-In</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>

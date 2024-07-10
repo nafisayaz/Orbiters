@@ -1,11 +1,11 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>Deck.qml</file>
-        <file>Index.qml</file>
-        <file>Login.qml</file>
-        <file>MessagePalette.qml</file>
-        <file>PaletteMsg.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/Deck.qml</file>
+        <file>qml/Index.qml</file>
+        <file>qml/Login.qml</file>
+        <file>qml/MessagePalette.qml</file>
+        <file>qml/PaletteMsg.qml</file>
         <file>images/inorbiter.png</file>
     </qresource>
 </RCC>

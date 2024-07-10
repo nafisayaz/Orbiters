@@ -34,7 +34,7 @@ Item {
                 color: primaryColor
                 Image {
                     id: icon
-                    source: "images/inorbiter.png"
+                    source: "../images/inorbiter.png"
                     anchors.fill: parent
 
                 }
@@ -50,7 +50,7 @@ Item {
 
             Text {
                 id: greet
-                text: qsTr("Welcome to Orbiters")
+                text: qsTr("Welcome to Orbiters-In")
                 color:"white"
                 font.bold: true
                 font.pointSize: 15
@@ -85,6 +85,8 @@ Item {
 //                    color: "#ffa23d"  // I update background color by this
                     color: "#02aba2"
                 }
+
+                
             }
 
             Text {
@@ -105,7 +107,7 @@ Item {
                 font.family: "aakar"
                 font.italic: true
                 font.underline: true
-                font.pointSize: 10
+                font.pointSize: 12
                 Layout.alignment: Qt.AlignCenter
 
             }

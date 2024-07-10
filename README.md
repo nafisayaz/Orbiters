@@ -1,6 +1,10 @@
+
+<!-- ![Alt text](images/Android_Orbiters-In.jpeg | width=100)  -->
+
+
+
 Orbiters-In
 =======
-
 Orbiters is an instant messaging (IM) and voice-over-IP (VoIP) service, it allows users to send text, voice messages, documents, user locations. 
 
 
@@ -21,4 +25,8 @@ For more info:
 - https://doc.qt.io/qt-6/supported-platforms.html
 - https://doc.qt.io/qt-6/android.html
 
+
+
+![Alt text](images/Desktop_Orbiters-In.png)
+<img src="images/Android_Orbiters-In.jpeg" width="auto" height="500">
 

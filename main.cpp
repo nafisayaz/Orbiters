@@ -5,7 +5,7 @@
 #include <QQuickView>
 #include <QQmlContext>
 
-#include <qmlengine.h>
+#include <app/qmlengine.h>
 //#include <appmanager.h>
 
 
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QMLEngine engine(&app);
-    engine.load("qrc:/main.qml");
+    engine.load("qrc:/qml/main.qml");
 
     return app.exec();
 

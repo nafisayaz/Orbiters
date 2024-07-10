@@ -11,7 +11,7 @@ Window {
     width: 480
     height: 840
     visible: true
-    title: qsTr("Orbiters")
+    title: qsTr("Orbiters-In")
 
     property string secondaryColor: "#ef7d00"
 

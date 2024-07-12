@@ -3,3 +3,4 @@
 .qmake.stash
 cmake_build
 build
+.vscode

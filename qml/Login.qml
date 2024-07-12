@@ -7,11 +7,16 @@ import QtQuick
 
 Item {
 
-    property string secondaryColor: "#ef7d00"
-    property string primaryColor: "#001C2D"
-    property string whiteColor: "#001C2D"
-    property string blueColor: "#01064a"
+    // property string secondaryColor: "#ef7d00"
+    // property string primaryColor: "#001C2D"
+    // property string whiteColor: "#001C2D"
+    // property string blueColor: "#01064a"
 
+    
+    property bool passcodenotifierVisibility : false
+    
+
+    
 
     id: login
 
@@ -23,7 +28,7 @@ Item {
         border.width: 1
         radius: 0
         gradient: Gradient {
-            GradientStop { position: 0.2; color: primaryColor}
+            GradientStop { position: 0.2; color: primaryColorDark}
         }
 
         RowLayout{
@@ -34,16 +39,16 @@ Item {
             Rectangle{
                 width: 120
                 height: 120
-                color: primaryColor
+                color: primaryColorDark
                 Image {
                     id: icon
-                    source: "images/inorbiter.png"
-//                    fillMode: Image.PreserveAspectFit
+                    source: "/images/inorbiter.png"
                     anchors.fill: parent
 
                 }
 
             }
+
         }
 
         ColumnLayout{
@@ -51,26 +56,54 @@ Item {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             Rectangle {
-                color:"white"
+                id: passcodenotifier
+                color: primaryColorDark
                 width: 250
                 height: 30
-                border.color : "red"
+                Text{
+                    text: "Incorrect passcode ****"
+                    color: "red";
+                    // font.family: "aakar"
+                    // font.italic: true
+                    // font.underline: true
+                    font.pointSize: 12
+                    anchors.fill: parent
+                    visible: passcodenotifierVisibility
+                }
+            }
+
+            Rectangle {
+                id: passcodeRec
+                width: 270
+                height: 40
+                color: primaryColor
+                border.color: control.down ? "#17a81a" : primaryColor
+                border.width: 1
+                radius: 10
+                
                 TextField{
-                    placeholderText: "Passcode"
-                    echoMode: TextInput.Password
+                    id: passcode
+                    // placeholderText: "Passcode"
+                    text: "Phone number or email ID"
+                    echoMode: TextInput.Normal
+                    focus: true
+                    hoverEnabled: true
+                    anchors.centerIn: parent
+                    color: primaryColorLight
 
                     background: Rectangle {
                         implicitWidth: 250
-                        implicitHeight: 40
+                        implicitHeight: 30
                         opacity: enabled ? 1 : 0.3
-                        border.color: control.down ? "#17a81a" : "#ef7d00"
-                        border.width: 1
-                        radius: 2
+                        color: primaryColor
+                        radius: 10
+                    }
+                    onPressed: {
+                        text=""
                     }
                 }
-
-
             }
+
 
             Button {
                 id: control
@@ -91,21 +124,45 @@ Item {
                     implicitWidth: 100
                     implicitHeight: 40
                     opacity: enabled ? 1 : 0.3
-                    border.color: control.down ? "#17a81a" : "#ef7d00"
+                    border.color: control.down ? secondaryColor : primaryColorLight
                     border.width: 1
-                    radius: 2
-                    color: "#ffa23d"  // I update background color by this
+                    radius: 10
+                    // color: "#ffa23d"  // I update background color by this
+                    color: secondaryColor
                 }
+
+                MouseArea {
+                   anchors.fill: parent
+                    // onClicked: recruitButton.switchIndex("clicked!")
+                    onClicked: { // working states
+                        if(appManager.switchLogin(passcode.text)){
+
+                            loginVisibility = false
+                            homeVisibility = true
+                            headerVisibility = true
+                            passcodenotifierVisibility = false
+
+                            console.log("loginVisibility : ", loginVisibility)
+                            console.log("homeVisibility : ", homeVisibility)
+                            
+                        }else{
+                            passcodenotifierVisibility = true
+                        }
+                        
+                    }
+                }
+
+
             }
 
             Rectangle {
-                id : scannerLink
-                color:"#001C2D"
+                id: scannerLink
+                color:primaryColorDark
                 width: 250
                 height: 30
                 Text{
                     text: "Don't have passcode ?"
-                    color: "#ef7d00";
+                    color: secondaryColor;
                     font.family: "aakar"
                     font.italic: true
                     font.underline: true

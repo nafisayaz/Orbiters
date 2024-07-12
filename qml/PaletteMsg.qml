@@ -44,7 +44,7 @@ Item {
 
                 Image {
                     id: userImg
-                    source: "images/nisha.jpeg"
+                    source: "../images/nisha.jpeg"
                     height: parent.height
                     width: parent.width
                     anchors.fill: parent

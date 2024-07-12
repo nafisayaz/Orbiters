@@ -38,9 +38,7 @@ Item {
                     anchors.fill: parent
 
                 }
-
             }
-
         }
 
         ColumnLayout{
@@ -50,7 +48,7 @@ Item {
 
             Text {
                 id: greet
-                text: qsTr("Welcome to Orbiters-In")
+                text: qsTr("Welcome Orbiters :)")
                 color:"white"
                 font.bold: true
                 font.pointSize: 15
@@ -59,17 +57,21 @@ Item {
             }
 
             Button {
-                id: control
+                id: recruitButton
                 text: qsTr("Jobseeker or Recruiter")
 //                Layout.alignment: Qt.AlignRight
                 Layout.alignment: Qt.AlignCenter
 
+                
+                signal switchIndex(string msg)
+                
+
                 contentItem: Text {
-                    text: control.text
-                    font: control.font
+                    text: recruitButton.text
+                    font: recruitButton.font
                     opacity: enabled ? 1.0 : 0.3
-//                    color: control.down ? "#17a81a" : "#001C2D"
-                    color: control.down ? "#ffa23d" : "white"
+//                    color: recruitButton.down ? "#17a81a" : "#001C2D"
+                    color: recruitButton.down ? "#ffa23d" : "white"
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     elide: Text.ElideRight
@@ -79,11 +81,27 @@ Item {
                     implicitWidth: 200
                     implicitHeight: 40
                     opacity: enabled ? 1 : 0.3
-                    border.color: control.down ? "#ffa23d" : secondaryColor
+                    border.color: recruitButton.down ? "#ffa23d" : secondaryColor
                     border.width: 1
                     radius: 10
 //                    color: "#ffa23d"  // I update background color by this
                     color: "#02aba2"
+                }
+
+                MouseArea {
+                   anchors.fill: parent
+                    // onClicked: recruitButton.switchIndex("clicked!")
+                    onClicked: { // working states
+                        if(appManager.switchIndex("Message from Index.qml")){
+                            indexVisibility = false
+                            loginVisibility = true
+
+                            console.log("indexVisibility : ", indexVisibility)
+                            console.log("loginVisibility : ", loginVisibility)
+                            
+                        }
+                        
+                    }
                 }
 
                 

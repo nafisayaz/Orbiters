@@ -13,23 +13,63 @@ Window {
     visible: true
     // title: qsTr("Orbiters-In")
 
-    property string secondaryColor: "#ef7d00"
-
-    property string primaryColorDark : "#000e17"
     property string primaryColor: "#001C2D"
-    property string primaryColorLight : "#cfeafa"
+    property string primaryColorLight: "#cfeafa"
+    property string primaryColorDark: "#000e17"
+
+    // property string secondaryColor: "#ef7d00"
+    property string secondaryColor: "#00d7ff"
+
+
     property string blueColor: "#01064a"
+    property string oldOriginalColor: "#21447"
 
-    property string oldOriginalColor : "#21447"
+    
+    property bool indexVisibility : true
+    property bool loginVisibility : false
+    property bool homeVisibility : false
+    property bool headerVisibility : false
+    
 
-    Index{
+    Loader {
+        id: indexLoader
+        visible: indexVisibility
+        source: "Index.qml"
     }
 
+    Connections {
+        target: indexLoader.item
+        
+        // function onswitchIndex(msg) {
+        //     indexVisibility = false
+        //     loginVisibility = true
+           
+        // }
+        
+    }
 
-    // Bargraph{
+    Loader {
+        id: loginLoader
+        visible: loginVisibility
+        source: "Login.qml"
 
-    // }
+    }
+    Connections {
+        target: loginLoader.item
 
+        
+    }
+
+    Loader {
+        id: homeLoader
+        visible: homeVisibility
+        source: "Home.qml"
+    }
+    Connections {
+        target: homeLoader.item
+
+        
+    }
 
 
 }

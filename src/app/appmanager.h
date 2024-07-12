@@ -15,6 +15,8 @@ public:
     void setIsNightMode(bool isNightMode);
     Q_INVOKABLE QString ret(QString str);
     Q_INVOKABLE QString gettime();
+    Q_INVOKABLE bool switchIndex(QString msg);
+    Q_INVOKABLE bool switchLogin(QString msg);
 
 
 signals:

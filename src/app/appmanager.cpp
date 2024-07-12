@@ -37,4 +37,20 @@ QString AppManager::gettime()
 }
 
 
-// /home/ayaz/Qt/6.3.2/gcc_64/bin/androiddeployqt
+bool AppManager::switchIndex(QString msg)
+{
+    qDebug() << "From C++ " <<msg <<" ";
+    
+    return true;
+
+}
+
+bool AppManager::switchLogin(QString passcode)
+{
+    QString local_passcode = "ayaz";
+
+    qDebug() << "From C++ " << passcode <<" ";
+    
+    return passcode == local_passcode ? true : false;
+
+}

@@ -29,6 +29,7 @@ Window {
     property bool loginVisibility : false
     property bool homeVisibility : false
     property bool headerVisibility : false
+    property bool searchbarVisibility : false
     
 
     Loader {

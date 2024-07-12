@@ -7,17 +7,30 @@ import QtQuick
 
 
 Item {
-    id: homeItem
+    id: headerItem
     Loader {
-        id: homeLoader
+        id: headerLoader
         visible: headerVisibility
         source: "Header.qml"
     }
     Connections {
-        target: homeLoader.item
+        target: headerLoader.item
 
         
     }
+    
+    Loader {
+        id: searchbarLoader
+        visible: searchbarVisibility
+        source: "Searchbar.qml"
+    }
+    Connections {
+        target: searchbarLoader.item
+
+        
+    }
+
+
     
 
 }

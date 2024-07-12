@@ -10,6 +10,7 @@
         <file>qml/PaletteMsg.qml</file>
         <file>qml/Bargraph.qml</file>
         <file>qml/Header.qml</file>
+        <file>qml/Searchbar.qml</file>
         <file>qml/Home.qml</file>
 
         <!-- <file>images/</file> -->
@@ -17,6 +18,9 @@
         <file>images/search.png</file>
         <file>images/mine_passportsize.jpeg</file>
         <file>images/nisha.jpeg</file>
+        <file>images/back.svg</file>
+        <file>images/cancel.svg</file>
+        <file>images/menu.svg</file>
 
     </qresource>
 </RCC>

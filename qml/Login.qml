@@ -143,7 +143,7 @@ Item {
                             passcodenotifierVisibility = false
 
                             console.log("loginVisibility : ", loginVisibility)
-                            console.log("deckVisibility : ", homeVisibility)
+                            console.log("homeVisibility : ", homeVisibility)
                             
                         }else{
                             passcodenotifierVisibility = true
